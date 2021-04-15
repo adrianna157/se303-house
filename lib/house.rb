@@ -8,7 +8,7 @@ class House
         when 2
             number = "This is the malt that lay in the house that Jack built.\n"
         when 3
-            
+            number = "This is the rat that ate the malt that lay in the house that Jack built.\n"
         else
             number = "This is the house that Jack built.\n"
         
