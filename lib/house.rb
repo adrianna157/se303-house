@@ -11,6 +11,8 @@ class House
             number = "This is the rat that ate the malt that lay in the house that Jack built.\n"
         when 4
             number = "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+        when 5
+            number = "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
         else
             number = "This is the house that Jack built.\n"
         
