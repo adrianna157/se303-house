@@ -1,5 +1,10 @@
 class House
 
+    def initialize(starting_clause = "This is")
+        {
+            @starting_clause = starting_clause
+        }
+
     def recite
        (1..12).collect{|i| line(i)}.join("\n")
     end
