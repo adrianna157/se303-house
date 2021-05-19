@@ -1,9 +1,10 @@
 class House
 
-    def initialize(starting_clause = "This is")
-        {
-            @starting_clause = starting_clause
-        }
+    attr_reader :starting_clause
+    
+    def initialize(starting_clause = "Phrase goes here")
+        @starting_clause = starting_clause
+    end
 
     def recite
        (1..12).collect{|i| line(i)}.join("\n")
@@ -36,8 +37,7 @@ class House
     end
 
     def line(number)
-        "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
-            
+        "#{starting_clause('This is')} #{pieces.last(number).join(' ')}.\n"      
     end
        
 
