@@ -9,9 +9,13 @@ class House
     def recite
        (1..12).collect{|i| line(i)}.join("\n")
     end
+    
+    def random_number
+        rand(1..12)
+    end
 
-    def line(number)
-        "#{starting_clause('This is')} #{pieces.last(number).join(' ')}.\n"      
+    def line
+        puts "#{starting_clause} #{pieces.shuffle.last(random_number).join(' ')}.\n"      
     end
 
     private
@@ -34,3 +38,6 @@ class House
     end
 
 end
+
+house = House.new("Thar be")
+house.line
