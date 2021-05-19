@@ -57,8 +57,6 @@ class House
            "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
         when 11
             "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
-        when 12
-            "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
         end
             
     end
