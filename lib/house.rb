@@ -14,8 +14,12 @@ class House
         rand(1..12)
     end
 
+    def ending_clause
+        " the house that Jack built"
+    end
+
     def line
-        puts "#{starting_clause} #{pieces.shuffle.last(random_number).join(' ')}.\n"      
+        puts "#{starting_clause} #{pieces.shuffle.join(' ') + ending_clause}.\n"      
     end
 
     private
