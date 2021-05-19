@@ -6,7 +6,7 @@ class House
 
     def phrase (number)
         if number 
-            "farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in" 
+            "the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in" 
         else
             "the house that Jack built"
         end
@@ -14,10 +14,16 @@ class House
 
     def starting_clause(number)
         if number
-            "This is the"
+            "This is"
         else
             return
         end
+    end
+
+    def pieces
+    [
+        'horse and the hound and the horn that belonged to the'
+    ]
     end
 
     def line(number)
@@ -45,7 +51,7 @@ class House
         when 11
             "#{starting_clause(number)} #{phrase(number)} the house that Jack built.\n"
         when 12
-            "#{starting_clause(number)} horse and the hound and the horn that belonged to the #{phrase(number)} the house that Jack built.\n"
+            "#{starting_clause(number)} the horse and the hound and the horn that belonged to #{phrase(number)} the house that Jack built.\n"
         end
             
     end
