@@ -14,6 +14,7 @@ class House
         "#{starting_clause('This is')} #{pieces.last(number).join(' ')}.\n"      
     end
 
+    private
 
     def pieces
     [
@@ -31,10 +32,5 @@ class House
         'the house that Jack built',
     ]
     end
-
-    
-
-    
-       
 
 end
