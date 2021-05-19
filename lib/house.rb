@@ -22,7 +22,7 @@ class House
 
     def pieces
     [
-        'horse and the hound and the horn that belonged to the'
+        'the horse and the hound and the horn that belonged to'
     ]
     end
 
@@ -51,7 +51,7 @@ class House
         when 11
             "#{starting_clause(number)} #{phrase(number)} the house that Jack built.\n"
         when 12
-            "#{starting_clause(number)} #{pieces.last(number)} #{phrase(number)} the house that Jack built.\n"
+            "#{starting_clause(number)} #{pieces.last(number).join(' ')} #{phrase(number)} the house that Jack built.\n"
         end
             
     end
