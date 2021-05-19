@@ -19,7 +19,7 @@ class House
     end
 
     def line
-        puts "#{starting_clause} #{pieces.shuffle.join(' ') + ending_clause}.\n"      
+        "#{starting_clause} #{pieces.shuffle.join(' ') + ending_clause}.\n"      
     end
 
     private
