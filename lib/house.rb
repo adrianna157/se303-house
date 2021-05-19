@@ -10,14 +10,10 @@ class House
        (1..12).collect{|i| line(i)}.join("\n")
     end
 
-
-    def starting_clause(number)
-        if number
-            "This is"
-        else
-            return
-        end
+    def line(number)
+        "#{starting_clause('This is')} #{pieces.last(number).join(' ')}.\n"      
     end
+
 
     def pieces
     [
@@ -36,9 +32,9 @@ class House
     ]
     end
 
-    def line(number)
-        "#{starting_clause('This is')} #{pieces.last(number).join(' ')}.\n"      
-    end
+    
+
+    
        
 
 end
