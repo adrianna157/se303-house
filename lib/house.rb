@@ -31,10 +31,7 @@ class House
     end
 
     def line(number)
-        case number
-        when number
-            "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
-        end
+        "#{starting_clause(number)} #{pieces.last(number).join(' ')}.\n"
             
     end
        
