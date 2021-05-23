@@ -14,9 +14,7 @@ class House
         rand(1..12)
     end
 
-    def ending_clause
-        " the house that Jack built"
-    end
+  
 
     def line
         "#{starting_clause} #{pieces.shuffle.join(' ') + ending_clause}.\n"      
@@ -43,6 +41,6 @@ class House
 
 end
 
-#  Delete Ending Clause, Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
+#  Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
 #TDD random feature - not test explicilty for randomness
 
