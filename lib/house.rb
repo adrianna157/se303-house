@@ -9,7 +9,6 @@ class House
     def recite
        (1..12).collect{|i| line(i)}.join("\n")
     end
-    
 
     def line(number)
         "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
