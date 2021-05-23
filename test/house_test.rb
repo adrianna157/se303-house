@@ -178,7 +178,7 @@ def test_thar_be_line_1
     assert_equal expected,House.new("Thar be").line(12)
   end
 
-  def test_random_order
+  def test_thar_be_random_order
      expected = <<-TEXT
 Thar be the house that Jack built.
 
