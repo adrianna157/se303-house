@@ -14,7 +14,10 @@ class House
         "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
     end
 
+    
+
     private
+
 
     def pieces
     [
@@ -38,3 +41,10 @@ end
 # Delete the printing, Delete Ending Clause, Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
 #TDD random feature - not test explicilty for randomness
 
+class RandomHouse < House
+
+ def line (number)
+        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " Thar be the house that Jack built"}.\n"       
+    end
+
+end
