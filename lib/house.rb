@@ -43,5 +43,6 @@ class House
 
 end
 
-house = House.new("Thar be")
-house.line
+#  Delete Ending Clause, Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
+#TDD random feature - not test explicilty for randomness
+
