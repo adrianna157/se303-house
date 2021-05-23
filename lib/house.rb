@@ -2,7 +2,7 @@ class House
 
     attr_reader :starting_clause
     
-    def initialize(starting_clause = "Phrase goes here")
+    def initialize(starting_clause = "This is")
         @starting_clause = starting_clause
     end
 
@@ -11,10 +11,8 @@ class House
     end
     
 
-  
-
-    def line
-        "#{starting_clause} #{pieces.shuffle.join(' ') + ending_clause}.\n"      
+    def line(number)
+        "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
     end
 
     private
@@ -38,6 +36,6 @@ class House
 
 end
 
-# Back out of Random to get back to green, create new test that will test thar be
+# Delete the printing, Delete Ending Clause, Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
 #TDD random feature - not test explicilty for randomness
 
