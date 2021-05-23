@@ -10,9 +10,6 @@ class House
        (1..12).collect{|i| line(i)}.join("\n")
     end
     
-    def random_number
-        rand(1..12)
-    end
 
   
 
@@ -41,6 +38,6 @@ class House
 
 end
 
-#  Delete the Random Number, Back out of Random to get back to green, create new test that will test thar be
+# Back out of Random to get back to green, create new test that will test thar be
 #TDD random feature - not test explicilty for randomness
 
