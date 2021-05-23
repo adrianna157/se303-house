@@ -2,6 +2,7 @@ gem 'minitest', '~> 5.4'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative '../lib/house'
+require 'test/unit'
 
 class HouseTest < Minitest::Test
 
@@ -209,6 +210,35 @@ Thar be the horse and the hound and the horn that belonged to the farmer sowing 
     refute_equal expected, RandomHouse.new('Thar be').recite, "Phrasese are the same"
     
   end
+
+def test_subject_verb_switch
+    phrase1 = 'the belonged that horse and the hound and the horn to'
+    phrase2 ='the sowing farmer his kept that corn'
+    phrase3 ='the crowed that rooster in the work that morn'
+    phrase4 ='the married all shaven and shorn that priest'
+    phrase5 ='the kissed all tattered and torn that man'
+    phrase6 ='the milked all forlorn that maiden'
+    phrase7 ='the tossed with the crumpled horn that cow'
+    phrase8 = 'the worried that dog'
+    phrase9 ='the killed that cat'
+    phrase10 ='the ate that rat'
+    phrase11 ='the lay that malt in'
+    phrase12 ='the Jack that house built'
+   
+    assert RandomHouse.new("Thar be").recite.include?(phrase1)
+    assert RandomHouse.new("Thar be").recite.include?(phrase2)
+    assert RandomHouse.new("Thar be").recite.include?(phrase3)
+    assert RandomHouse.new("Thar be").recite.include?(phrase4)
+    assert RandomHouse.new("Thar be").recite.include?(phrase5)
+    assert RandomHouse.new("Thar be").recite.include?(phrase6)
+    assert RandomHouse.new("Thar be").recite.include?(phrase7)
+    assert RandomHouse.new("Thar be").recite.include?(phrase8)
+    assert RandomHouse.new("Thar be").recite.include?(phrase9)
+    assert RandomHouse.new("Thar be").recite.include?(phrase10)
+    assert RandomHouse.new("Thar be").recite.include?(phrase11)
+    assert RandomHouse.new("Thar be").recite.include?(phrase12)
+
+end
 
   def test_thar_be_all_the_lines
     # skip
