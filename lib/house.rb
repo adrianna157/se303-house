@@ -37,10 +37,10 @@ class House
 
 end
 
-class VerbClauseHouse < House
-    # def line (number)
-    #     "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
-    # end
+class RandomVerbClauseHouse < House
+    def line (number)
+        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
+    end
      
     def pieces
     [
@@ -83,3 +83,4 @@ end
 
 
 
+puts(RandomVerbClauseHouse.new("Thar be").recite)
