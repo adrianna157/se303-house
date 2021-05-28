@@ -225,18 +225,18 @@ def test_subject_verb_switch
     phrase11 ='the lay that malt in'
     phrase12 ='the Jack that house built'
    
-    assert RandomHouse.new("Thar be").recite.include?(phrase1)
-    assert RandomHouse.new("Thar be").recite.include?(phrase2)
-    assert RandomHouse.new("Thar be").recite.include?(phrase3)
-    assert RandomHouse.new("Thar be").recite.include?(phrase4)
-    assert RandomHouse.new("Thar be").recite.include?(phrase5)
-    assert RandomHouse.new("Thar be").recite.include?(phrase6)
-    assert RandomHouse.new("Thar be").recite.include?(phrase7)
-    assert RandomHouse.new("Thar be").recite.include?(phrase8)
-    assert RandomHouse.new("Thar be").recite.include?(phrase9)
-    assert RandomHouse.new("Thar be").recite.include?(phrase10)
-    assert RandomHouse.new("Thar be").recite.include?(phrase11)
-    assert RandomHouse.new("Thar be").recite.include?(phrase12)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase1)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase2)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase3)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase4)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase5)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase6)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase7)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase8)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase9)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase10)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase11)
+    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase12)
 
 end
 

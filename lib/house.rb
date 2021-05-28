@@ -37,21 +37,12 @@ class House
 
 end
 
-def RandomVerbClauseHouse < House
-
-end
-
-
-
-
-class RandomHouse < House
-
-    
+class RandomVerbClauseHouse < House
     def line (number)
         "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
     end
-
-     def pieces
+     
+    def pieces
     [
         'the belonged that horse and the hound and the horn to',
         'the sowing farmer his kept that corn',
@@ -69,6 +60,17 @@ class RandomHouse < House
     end
 end
 
+
+
+
+class RandomHouse < House
+
+    def line (number)
+        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
+    end
+
+end
+
 class PirateHouse < House
    attr_reader :starting_clause
     
@@ -78,12 +80,6 @@ class PirateHouse < House
 
 end
 
-# house = House.new
-# puts(house.recite)
 
-randomHouse = House.new
-randomHouse.randomLyrics
-
-puts(randomHouse.randomLyrics)
 
 
