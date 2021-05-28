@@ -42,7 +42,7 @@ end
 class RandomHouse < House
 
     def line (number)
-        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " Thar be the house that Jack built"}.\n"       
+        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
     end
 
      def pieces
