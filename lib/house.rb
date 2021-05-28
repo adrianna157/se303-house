@@ -60,4 +60,9 @@ class RandomHouse < House
         'the Jack that house built',
     ]
     end
+
+class PirateHouse < House
+    
+end
+
 end
