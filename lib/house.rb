@@ -71,14 +71,6 @@ class RandomHouse < House
 
 end
 
-class PirateHouse < House
-   attr_reader :starting_clause
-    
-    def initialize(starting_clause = "Thar be")
-        @starting_clause = starting_clause
-    end
-
-end
 
 
 
