@@ -62,7 +62,7 @@ class RandomHouse < House
     end
 
 class PirateHouse < House
-    
+    starting_clause = 'Thar be'
 end
 
 end
