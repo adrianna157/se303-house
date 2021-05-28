@@ -13,10 +13,6 @@ class House
     def line(number)
         "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
     end
-    
-    def randomLyrics(number)
-        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"
-    end
 
 
     private
@@ -40,6 +36,11 @@ class House
     end
 
 end
+
+def RandomVerbClauseHouse < House
+
+end
+
 
 
 
@@ -77,6 +78,12 @@ class PirateHouse < House
 
 end
 
-puts(House.new.randomLyrics(12))
+# house = House.new
+# puts(house.recite)
+
+randomHouse = House.new
+randomHouse.randomLyrics
+
+puts(randomHouse.randomLyrics)
 
 
