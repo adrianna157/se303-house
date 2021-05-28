@@ -40,6 +40,7 @@ end
 
 class RandomHouse < House
 
+    
     def line (number)
         "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
     end
@@ -68,9 +69,7 @@ class PirateHouse < House
     def initialize(starting_clause = "Thar be")
         @starting_clause = starting_clause
     end
-    def line(number)
-        "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
-    end
+
 end
 
 puts(PirateHouse.new.line(12))
