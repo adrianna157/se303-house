@@ -60,9 +60,19 @@ class RandomHouse < House
         'the Jack that house built',
     ]
     end
+end
 
 class PirateHouse < House
-    starting_clause = 'Thar be'
+   attr_reader :starting_clause
+    
+    def initialize(starting_clause = "Thar be")
+        @starting_clause = starting_clause
+    end
+    def line(number)
+        "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
+    end
 end
 
-end
+puts(PirateHouse.new.line(12))
+
+
