@@ -1,24 +1,4 @@
-class House
-
-    attr_reader :starting_clause
-    
-    def initialize(starting_clause = "This is")
-        @starting_clause = starting_clause
-    end
-
-    def recite
-       (1..12).collect{|i| line(i)}.join("\n")
-    end
-
-    def line(number)
-        "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
-    end
-
-
-    private
-
-
-    def pieces
+PIECES =  
     [
         'the horse and the hound and the horn that belonged to',
         'the farmer sowing his corn that kept',
@@ -33,16 +13,8 @@ class House
         'the malt that lay in',
         'the house that Jack built',
     ]
-    end
 
-end
-
-class RandomVerbClauseHouse < House
-    def line (number)
-        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
-    end
-     
-    def pieces
+ RANDOMPIECES =
     [
         'the belonged that horse and the hound and the horn to',
         'the sowing farmer his kept that corn',
@@ -57,7 +29,44 @@ class RandomVerbClauseHouse < House
         'the lay that malt in',
         'the Jack that house built',
     ]
+
+
+
+class House
+
+    attr_reader :starting_clause
+    
+    def initialize(starting_clause = "This is")
+        @starting_clause = starting_clause
     end
+
+    def recite
+       (1..12).collect{|i| line(i)}.join("\n")
+    end
+
+    def shuffle!
+        PIECES.shuffle!
+        self
+    end
+
+    def line(number)
+        "#{starting_clause} #{PIECES.last(number).join(' ')}.\n"      
+    end
+
+
+    private
+
+
+   
+
+end
+
+class RandomVerbClauseHouse < House
+    def line (number)
+        "#{starting_clause} #{RANDOMPIECES.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
+    end
+     
+  
 end
 
 
@@ -66,7 +75,7 @@ end
 class RandomHouse < House
 
     def line (number)
-        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
+        "#{starting_clause} #{RANDOMPIECES.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
     end
 
 end
