@@ -232,9 +232,37 @@ This is the farmer sowing his corn that kept the rooster that crowed in the morn
 
 This is the horse and the hound and the horn that belonged to the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.
     TEXT
+
+expected_subject_verb_switch = <<-TEXT 
+Thar be the ate that rat the house that Jack built.
+
+Thar be the worried that dog the kissed all tattered and torn that man the house that Jack built.
+
+Thar be the lay that malt in the belonged that horse and the hound and the horn to the married all shaven and shorn that priest the house that Jack built.
+
+Thar be the Jack that house built the killed that cat the crowed that rooster in the work that morn the kissed all tattered and torn that man the house that Jack built.
+
+Thar be the crowed that rooster in the work that morn the Jack that house built the belonged that horse and the hound and the horn to the kissed all tattered and torn that man the sowing farmer his kept that corn the house that Jack built.
+
+Thar be the kissed all tattered and torn that man the crowed that rooster in the work that morn the ate that rat the milked all forlorn that maiden the worried that dog the killed that cat the house that Jack built.
+
+Thar be the lay that malt in the crowed that rooster in the work that morn the Jack that house built the sowing farmer his kept that corn the milked all forlorn that maiden the ate that rat the worried that dog the house that Jack built.
+
+Thar be the crowed that rooster in the work that morn the ate that rat the married all shaven and shorn that priest the belonged that horse and the hound and the horn to the worried that dog the tossed with the crumpled horn that cow the Jack that house built the kissed all tattered and torn that man the house that Jack built.
+
+Thar be the milked all forlorn that maiden the kissed all tattered and torn that man the belonged that horse and the hound and the horn to the lay that malt in the married all shaven and shorn that priest the tossed with the crumpled horn that cow the Jack that house built the crowed that rooster in the work that morn the ate that rat the house that Jack built.
+
+Thar be the sowing farmer his kept that corn the crowed that rooster in the work that morn the worried that dog the Jack that house built the ate that rat the kissed all tattered and torn that man the belonged that horse and the hound and the horn to the tossed with the crumpled horn that cow the milked all forlorn that maiden the killed that cat the house that Jack built.
+
+Thar be the belonged that horse and the hound and the horn to the tossed with the crumpled horn that cow the married all shaven and shorn that priest the killed that cat the kissed all tattered and torn that man the Jack that house built the ate that rat the worried that dog the lay that malt in the sowing farmer his kept that corn the crowed that rooster in the work that morn the house that Jack built.
+
+Thar be the married all shaven and shorn that priest the belonged that horse and the hound and the horn to the killed that cat the kissed all tattered and torn that man the milked all forlorn that maiden the Jack that house built the tossed with the crumpled horn that cow the crowed that rooster in the work that morn the sowing farmer his kept that corn the worried that dog the lay that malt in the ate that rat the house that Jack built.
+TEXT
     
     refute_equal expected_this_is, RandomHouse.new('This is').recite, "Phrasese are the same"
     refute_equal expected_this_is, RandomHouse.new('Thar be').recite, "Phrasese are the same"
+    refute_equal expected_subject_verb_switch, RandomHouse.new('This is').recite, "Phrasese are the same"
+    refute_equal expected_subject_verb_switch, RandomHouse.new('Thar be').recite, "Phrasese are the same"
     
   end
 
