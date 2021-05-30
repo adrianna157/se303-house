@@ -70,8 +70,8 @@ end
 
 class RandomHouse < House
 
-    def line (number)
-        "#{starting_clause} #{pieces.shuffle.last(number).join(' ') + " the house that Jack built"}.\n"       
+    def pieces
+        super.shuffle
     end
 
 end
