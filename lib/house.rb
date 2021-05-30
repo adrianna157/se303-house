@@ -8,7 +8,6 @@ class House
     def initialize(starting_clause = "This is")
         @starting_clause = starting_clause
         @phrase = pieces
-       
     end
 
     def recite
@@ -43,7 +42,15 @@ class House
     
 end
 
-class VerbClauseHouse < House
+class VerbNounSwitchHouse < House
+   
+ 
+    
+    def initialize(house = House)
+
+       
+    end
+
 
    def line(number)
         "#{starting_clause} #{pieces[number].split(' ').reverse.join(' ')}.\n"      
@@ -61,9 +68,7 @@ class RandomHouse < House
 end
 
 
-
-
-
-house = RandomVerbClauseHouse.new
+house = RandomHouse.new
+verbClause = VerbNounSwitchHouse.new
 puts house.line(0)
 # puts house.shuffle!
