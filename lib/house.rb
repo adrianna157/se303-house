@@ -63,9 +63,7 @@ class RandomHouse < House
 end
 
 
-
-puts VerbNounSwitchHouse.new.recite
-
+puts VerbNounSwitchHouse.new("Thar be").recite
 
 
-# puts house.shuffle!
+

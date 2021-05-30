@@ -267,31 +267,31 @@ TEXT
   end
 
 def test_subject_verb_switch
-    phrase1 = 'the belonged that horse and the hound and the horn to'
-    phrase2 ='the sowing farmer his kept that corn'
-    phrase3 ='the crowed that rooster in the work that morn'
-    phrase4 ='the married all shaven and shorn that priest'
-    phrase5 ='the kissed all tattered and torn that man'
-    phrase6 ='the milked all forlorn that maiden'
-    phrase7 ='the tossed with the crumpled horn that cow'
-    phrase8 = 'the worried that dog'
-    phrase9 ='the killed that cat'
-    phrase10 ='the ate that rat'
-    phrase11 ='the lay that malt in'
-    phrase12 ='the Jack that house built'
+    phrase1 = 'to belonged that horn the and hound the and horse the.'
+    phrase2 ='kept that corn his sowing farmer the.'
+    phrase3 ='woke that morn the in crowed that rooster the.'
+    phrase4 ='married that shorn and shaven all priest the.'
+    phrase5 ='kissed that torn and tattered all man the.'
+    phrase6 ='milked that forlorn all maiden the.'
+    phrase7 ='tossed that horn crumpled the with cow the.'
+    phrase8 = 'worried that dog the.'
+    phrase9 ='killed that cat the.'
+    phrase10 ='ate that rat the.'
+    phrase11 ='in lay that malt the.'
+    phrase12 ='built Jack that house the.'
    
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase1)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase2)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase3)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase4)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase5)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase6)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase7)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase8)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase9)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase10)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase11)
-    assert RandomVerbClauseHouse.new("Thar be").recite.include?(phrase12)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase1)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase2)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase3)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase4)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase5)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase6)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase7)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase8)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase9)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase10)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase11)
+    assert VerbNounSwitchHouse.new("Thar be").recite.include?(phrase12)
 
 end
 
