@@ -260,9 +260,9 @@ Thar be the married all shaven and shorn that priest the belonged that horse and
 TEXT
     
     refute_equal expected_this_is, RandomHouse.new('This is').recite, "Phrasese are the same"
-    refute_equal expected_this_is, House.new('Thar be').recite, "Phrasese are the same"
-    refute_equal expected_subject_verb_switch, House.new('This is').recite, "Phrasese are the same"
-    refute_equal expected_subject_verb_switch, House.new('Thar be').recite, "Phrasese are the same"
+    refute_equal expected_this_is,RandomHouse.new('Thar be').recite, "Phrasese are the same"
+    refute_equal expected_subject_verb_switch,RandomHouse.new('This is').recite, "Phrasese are the same"
+    refute_equal expected_subject_verb_switch,RandomHouse.new('Thar be').recite, "Phrasese are the same"
     
   end
 
