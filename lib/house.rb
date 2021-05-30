@@ -21,8 +21,7 @@ class House
     end
 
 
-    private
-
+    
     def  pieces  
         [
             'the horse and the hound and the horn that belonged to',
@@ -43,15 +42,11 @@ class House
 end
 
 class VerbNounSwitchHouse < House
-   
- 
-    
-    def initialize(house = House)
 
-       
+    def recite
+       (0..11).collect{|i| line(i)}.join("\n")
     end
-
-
+    
    def line(number)
         "#{starting_clause} #{pieces[number].split(' ').reverse.join(' ')}.\n"      
     end
@@ -68,7 +63,9 @@ class RandomHouse < House
 end
 
 
-house = RandomHouse.new
-verbClause = VerbNounSwitchHouse.new
-puts house.line(0)
+
+puts VerbNounSwitchHouse.new.recite
+
+
+
 # puts house.shuffle!
