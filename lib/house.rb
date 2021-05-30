@@ -21,45 +21,6 @@ class House
         "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
     end
 
-    def verb
-    [
-       "belonged to",
-       "kept",
-       "woke",
-       "crowed",
-       "married",
-       "kissed",
-       "milked",
-       "tossed",
-       "worried",
-       "killed",
-       "ate",
-       "lay in",
-       "built"
-    ]
-    end
-   
-     def noun
-        "horse",
-        "hound",
-        "horn",
-        "farmer",
-        "corn",
-        "rooster",
-        "morn",
-        "priest",
-        "man",
-        "maiden",
-        "cow",
-        "horn",
-        "dog",
-        "cat",
-        "rat",
-        "malt",
-        "house"
-
-    end
-
 
     private
 
@@ -82,24 +43,11 @@ class House
     
 end
 
-class RandomVerbClauseHouse < House
+class VerbClauseHouse < House
 
-    def pieces
-[
-    'the belonged that horse and the hound and the horn to',
-    'the sowing farmer his kept that corn',
-    'the crowed that rooster in the work that morn',
-    'the married all shaven and shorn that priest',
-    'the kissed all tattered and torn that man',
-    'the milked all forlorn that maiden',
-    'the tossed with the crumpled horn that cow',
-    'the worried that dog',
-    'the killed that cat',
-    'the ate that rat',
-    'the lay that malt in',
-    'the Jack that house built',
-]
-end
+   def line(number)
+        "#{starting_clause} #{pieces[number].split(' ').reverse.join(' ')}.\n"      
+    end
   
 end
 
@@ -116,6 +64,6 @@ end
 
 
 
-house = House.new
-puts house.verb
+house = RandomVerbClauseHouse.new
+puts house.line(0)
 # puts house.shuffle!
