@@ -38,8 +38,27 @@ class House
        "built"
     ]
     end
-
    
+     def noun
+        "horse",
+        "hound",
+        "horn",
+        "farmer",
+        "corn",
+        "rooster",
+        "morn",
+        "priest",
+        "man",
+        "maiden",
+        "cow",
+        "horn",
+        "dog",
+        "cat",
+        "rat",
+        "malt",
+        "house"
+
+    end
 
 
     private
