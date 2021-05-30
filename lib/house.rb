@@ -21,6 +21,26 @@ class House
         "#{starting_clause} #{pieces.last(number).join(' ')}.\n"      
     end
 
+    def verb
+    [
+       "belonged to",
+       "kept",
+       "woke",
+       "crowed",
+       "married",
+       "kissed",
+       "milked",
+       "tossed",
+       "worried",
+       "killed",
+       "ate",
+       "lay in",
+       "built"
+    ]
+    end
+
+   
+
 
     private
 
@@ -40,6 +60,7 @@ class House
             'the house that Jack built',
         ]
     end
+    
 end
 
 class RandomVerbClauseHouse < House
@@ -76,5 +97,6 @@ end
 
 
 
-# house = House.new
+house = House.new
+puts house.verb
 # puts house.shuffle!
